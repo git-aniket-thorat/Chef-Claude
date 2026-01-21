@@ -5,9 +5,7 @@ import ClaudeRecipe from "./ClaudeRecipe";
 export default function Main() {
   const [ingredients, setIngredients] = React.useState([]);
 
-  const ingredientsListItems = ingredients.map((ingredient) => (
-    <li key={ingredient}>{ingredient}</li>
-  ));
+  
 
   const [recipeShown, setRecipeShown] = React.useState(false)
     function toggleRecipeShown() {
@@ -32,7 +30,7 @@ export default function Main() {
         <button type="submit">+ Add ingredients</button>
       </form>
 
-      {ingredients.length > 0 && <IngredientsList listItems ={ingredientsListItems} length={ingredients.length}  toggle={toggleRecipeShown}/>
+      {ingredients.length > 0 && <IngredientsList  ingredients={ingredients}  toggle={toggleRecipeShown}/>
       }
        {recipeShown && <ClaudeRecipe/>}
     </main>
