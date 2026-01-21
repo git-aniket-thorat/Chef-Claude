@@ -116,7 +116,9 @@ main {
 .add-ingredients-form>button:hover {
   background-color: #2a2a28;
 }
-
+main{
+  background: #F0EFEB;
+}
 main > section {
   width: 100%;
   max-width: 594px;
